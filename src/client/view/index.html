@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capstone Travel App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <section class="nav-bar">
+      <div class="logo">Go Trip</div>
+      <ul class="menu">
+        <li><a href="#">home</a></li>
+        <li><a href="#">tours</a></li>
+        <li><a href="#">package</a></li>
+        <li><a href="#">blog</a></li>
+        <li><a href="#">about us</a></li>
+        <li><a href="#">contact us</a></li>
+      </ul>
+    </section>
+    <!-- Banner -->
+    <section class="banner">
+      <div class="banner-text-item">
+        <div class="banner-heading">
+          <h1>Find your Next tour!</h1>
+        </div>
+        <form class="form" onsubmit="return Client.onSubmit(event)">
+          <input
+            type="text"
+            list="mylist"
+            id="destination"
+            placeholder="Where would you like to go?"
+          />
+          <button class="book" type="submit">Booking</button>
+        </form>
+      </div>
+    </section>
+    <!-- Places -->
+    <section class="places">
+      <div class="places-text">
+        <small>FEATURED TOURS PACKAGES</small>
+        <h2>Favourite Places</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293736/james-wheeler_xqmq2y.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Vancouver, Canada</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293755/paris_uj8wum.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Paris, France</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293955/monaco_usu7xb.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Monaco, Monaco</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293874/switzerland_tubxcm.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Bern, Switzerland</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/korea_bxrcj5.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Seoul, South Korea</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="zoom-img">
+            <div class="img-card">
+              <img
+                src="https://res.cloudinary.com/dxssqb6l8/image/upload/v1605293673/night-4336403_1920_demehp.jpg"
+              />
+            </div>
+          </div>
+
+          <div class="text">
+            <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+            <h2>The Dark Forest Adventure</h2>
+            <p class="cost">$1870 / Per Person</p>
+            <div class="card-box">
+              <p class="time">&#128339; 3 Days</p>
+              <p class="location">&#9992; Tokyo, japan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((data) => {
+              console.log("SW registered successfuly: ", data);
+            });
+        });
+      } else {
+        console.log("SW  not supported");
+      }
+    </script>
+  </body>
+</html>
