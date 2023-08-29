@@ -30,9 +30,7 @@ function postInfo(req,res){
     projectData['weather'] = req.body.weather;
     projectData['daysLeft'] = req.body.daysLeft;
     res.send(projectData);
-
 }
-
 
 const port = 8080;
 const server = app.listen(port, listening);
