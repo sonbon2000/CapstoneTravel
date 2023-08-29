@@ -1,13 +1,16 @@
-import { onSubmit } from "./js/formDataHandler";
-import { getGeonameDataHandler } from "./js/getGeonameDataHandler";
-import { getWeatherBitDataHandler } from "./js/getWeatherBitDataHandler";
-import { getPixabayImagesHandler } from "./js/getPixarBayDataHandler";
+import { validURL } from './js/urlChecker'
+import {goSomewhere} from './js/app'
+import {goSomewhereFunc} from './js/app'
+import {checkInput} from './js/inputCheck'
+import './styles/resets.scss'
+import './styles/header.scss'
+import './styles/form.scss'
+import './styles/footer.scss'
+import './styles/base.scss'
 
-import "./styles/index.scss";
-
-export {
-  getWeatherBitDataHandler,
-  getGeonameDataHandler,
-  getPixabayImagesHandler,
-  onSubmit,
-};
+export{
+    validURL,
+    goSomewhere,
+    goSomewhereFunc,
+    checkInput,
+}
